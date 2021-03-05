@@ -12,31 +12,56 @@
                 </caption>
                 <tfoot>
                     <tr>
-                        <td colspan="2">Forse reactie op FENOXYMETHYLPENICILLINE TEVA CAPSULE 250MG</td>
+                        <td colspan="2">Geldt alleen voor dit merk.</td>
                     </tr>
                 </tfoot>
                 <tbody>
                     <tr>
                         <th>Code</th>
                         <td>
-                            <span title="FENOXYMETHYLPENICILLINE CF CAPSULE 250MG (1051555 - G-Standaard HPK)">FENOXYMETHYLPENICILLINE CF CAPSULE 250MG</span>
+                            <span title="PREDNISOLON CAPSULE 65MG FNA MR (1112821 - G-Standaard HPK)">PREDNISOLON CAPSULE 65MG FNA MR</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Informant</th>
+                        <td>
+                            <a href="PractitionerRole/33333334301-002">M. Boot || Allergoloog (gesloten register)</a>
                         </td>
                     </tr>
                     <tr>
                         <th>Eerste symptomen</th>
-                        <td>${DATE, T, D, -500}</td>
+                        <td>${DATE, T, D, -50}</td>
+                    </tr>
+                    <tr>
+                        <th>Meest recente voorkomen</th>
+                        <td>${DATE, T, D, -50}T17:45:00+02:00</td>
+                    </tr>
+                    <tr>
+                        <th>Reactie</th>
+                        <td>
+                            <ul>
+                                <li>
+                                    <div>${DATE, T, D, -50}T17:45:00+02:00 <span title="Ernstig (24484000 - SNOMED CT)">Ernstig</span>
+                                    </div>
+                                    <div>
+                                        <span title="Toxische epidermale necrolyse (23067006 - SNOMED CT)">Toxische epidermale necrolyse</span>
+                                    </div>
+                                    <div>Blaren op grote delen van de huid</div>
+                                </li>
+                            </ul>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </text>
-    <clinicalStatus value="active">
+    <clinicalStatus value="inactive">
         <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
             <valueCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/v3/ActStatus"/>
-                    <code value="active"/>
-                    <display value="Active"/>
+                    <code value="obsolete"/>
+                    <display value="Achterhaald"/>
                 </coding>
             </valueCodeableConcept>
         </extension>
@@ -53,29 +78,29 @@
             </valueCodeableConcept>
         </extension>
     </category>
-    <!--<criticality value="high">
+    <criticality value="high">
         <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
             <valueCodeableConcept>
                 <coding>
                     <system value="http://snomed.info/sct"/>
-                    <code value="24484000"/>
-                    <display value="Severe"/>
+                    <code value="6736007"/>
+                    <display value="matig"/>
                 </coding>
             </valueCodeableConcept>
         </extension>
-    </criticality>-->
+    </criticality>
     <code>
         <coding>
             <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
-            <code value="1051555"/>
-            <display value="FENOXYMETHYLPENICILLINE CF CAPSULE 250MG"/>
+            <code value="1112821"/>
+            <display value="PREDNISOLON CAPSULE 65MG FNA MR"/>
         </coding>
     </code>
     <patient>
         <reference value="Patient/gpdata-patient-kwalificatie1"/>
         <display value="Jacqueline XXX_Cevat"/>
     </patient>
-    <onsetDateTime value="${DATE, T, D, -500}"/>
+    <onsetDateTime value="${DATE, T, D, -50}"/>
     <recorder>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
             <valueReference>
@@ -87,6 +112,35 @@
         <display value="Dr. V. Huisarts 1"/>
     </recorder>
     <note>
-        <text value="Forse reactie op FENOXYMETHYLPENICILLINE TEVA CAPSULE 250MG"/>
+        <text value="Geldt alleen voor dit merk."/>
     </note>
+	<reaction>
+        <substance>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.4.1.750"/>
+                <code value="4170"/>
+                <display value="Prednisolon"/>
+            </coding>
+        </substance>
+        <manifestation>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="23067006"/>
+                <display value="Toxische epidermale necrolyse"/>
+            </coding>
+        </manifestation>
+        <description value="Blaren op grote delen van de huid"/>
+        <onset value="${DATE, T, D, -50}T17:45:00+02:00"/>
+        <severity value="severe">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="24484000"/>
+                        <display value="Ernstig"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+        </severity>
+    </reaction>
 </AllergyIntolerance>

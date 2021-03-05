@@ -5,7 +5,7 @@
    <url value="http://nictiz.nl/fhir/TestScript/load-resources-purgecreateupdate-xml"/>
    <name value="Load Test Resources - Purge Create Update - XML"/>
    <status value="active"/>
-   <date value="2021-02-11"/>
+   <date value="2021-03-05"/>
    <publisher value="Nictiz"/>
    <contact>
       <name value="MedMij"/>
@@ -19,7 +19,7 @@
    <copyright value="© Nictiz 2020"/>
    <fixture id="AllergyIntolerance-gp-allergyintolerance-fenoxymethylpenicilline">
       <resource>
-         <reference value="../_reference/resources-query-send/medmij-gpdata-allergyintolerance-fenoxymethylpenicilline.xml"/>
+         <reference value="../_reference/resources-query-send/medmij-gpdata-allergyintolerance-prednisolon.xml"/>
       </resource>
    </fixture>
    <fixture id="Composition-gp-EncounterReport-gpdata-encounter-contact01">
